@@ -1,0 +1,97 @@
+Uso de git hub
+
+
+alumno@DESKTOP-N2H88CC MINGW64 ~
+$ pwd
+/c/Users/alumno
+
+alumno@DESKTOP-N2H88CC MINGW64 ~
+$ mkdir Ejercicios
+
+alumno@DESKTOP-N2H88CC MINGW64 ~
+$ cd Ejercicios
+
+alumno@DESKTOP-N2H88CC MINGW64 ~/Ejercicios
+$ git clone https://github.com/alber-gonzalez/java-ejercicios-tdp.git
+Cloning into 'java-ejercicios-tdp'...
+remote: Counting objects: 274, done.
+remote: Compressing objects: 100% (85/85), done.
+remote: Total 274 (delta 120), reused 222 (delta 68), pack-reused 0
+Receiving objects: 100% (274/274), 36.46 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (120/120), done.
+
+alumno@DESKTOP-N2H88CC MINGW64 ~/Ejercicios
+$ cd java-ejercicios-tdp
+
+alumno@DESKTOP-N2H88CC MINGW64 ~/Ejercicios/java-ejercicios-tdp (master)
+$ git checkout
+Your branch is up-to-date with 'origin/master'.
+
+alumno@DESKTOP-N2H88CC MINGW64 ~/Ejercicios/java-ejercicios-tdp (master)
+$ git checkout ejercicio01
+Switched to a new branch 'ejercicio01'
+Branch ejercicio01 set up to track remote branch ejercicio01 from origin.
+
+alumno@DESKTOP-N2H88CC MINGW64 ~/Ejercicios/java-ejercicios-tdp (ejercicio01)
+$ git add .
+
+alumno@DESKTOP-N2H88CC MINGW64 ~/Ejercicios/java-ejercicios-tdp (ejercicio01)
+$ git commit -m "Ejercicio que imprime por pantalla valor numerico de un caracter"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'alumno@DESKTOP-N2H88CC.(none)')
+
+alumno@DESKTOP-N2H88CC MINGW64 ~/Ejercicios/java-ejercicios-tdp (ejercicio01)
+$ git^C
+
+alumno@DESKTOP-N2H88CC MINGW64 ~/Ejercicios/java-ejercicios-tdp (ejercicio01)
+$
+
+alumno@DESKTOP-N2H88CC MINGW64 ~/Ejercicios/java-ejercicios-tdp (ejercicio01)
+$  git config --global user.email albertonicolas.gonzalez@gmail.com
+
+alumno@DESKTOP-N2H88CC MINGW64 ~/Ejercicios/java-ejercicios-tdp (ejercicio01)
+$  git config --global user.name alber-gonzalez
+
+alumno@DESKTOP-N2H88CC MINGW64 ~/Ejercicios/java-ejercicios-tdp (ejercicio01)
+$ $ git commit -m "Ejercicio que imprime por pantalla valor numerico de un caracter"
+bash: $: command not found
+
+alumno@DESKTOP-N2H88CC MINGW64 ~/Ejercicios/java-ejercicios-tdp (ejercicio01)
+$ $ git commit -m "Ejercicio que imprime por pantalla valor numerico de un caracter"
+bash: $: command not found
+
+alumno@DESKTOP-N2H88CC MINGW64 ~/Ejercicios/java-ejercicios-tdp (ejercicio01)
+$ $ git commit -m "Ejercicio que imprime por pantalla valor numerico de un caracter"
+bash: $: command not found
+
+alumno@DESKTOP-N2H88CC MINGW64 ~/Ejercicios/java-ejercicios-tdp (ejercicio01)
+$ git commit -m "Ejercicio que imprime por pantalla valor numerico de un caracter"
+[ejercicio01 30d2f17] Ejercicio que imprime por pantalla valor numerico de un caracter
+ 1 file changed, 17 insertions(+)
+
+alumno@DESKTOP-N2H88CC MINGW64 ~/Ejercicios/java-ejercicios-tdp (ejercicio01)
+$ git push origin ejercicio01
+aCounting objects: 7, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (7/7), 616 bytes | 0 bytes/s, done.
+Total 7 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/alber-gonzalez/java-ejercicios-tdp.git
+   8d7b78b..30d2f17  ejercicio01 -> ejercicio01
+
+alumno@DESKTOP-N2H88CC MINGW64 ~/Ejercicios/java-ejercicios-tdp (ejercicio01)
+$ ^C
+
+alumno@DESKTOP-N2H88CC MINGW64 ~/Ejercicios/java-ejercicios-tdp (ejercicio01)
+$
