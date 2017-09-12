@@ -1,0 +1,65 @@
+Main 
+
+package io.banco;
+import io.banco.cuentas.Master;
+public class Main {
+    public static void main (String [] args){
+    Master ahorro = new Master ("12345678", "pepito", 5000);
+    ahorro.cambiarAlias("aliasMachio");
+    double saldoaRetirar = 6000;
+    double resultadoDelaExtraccionPorCajero = ahorro.retirar (saldoaRetirar);
+    
+    if (resultadoDelaExtraccionPorCajero < 0){
+        System.err.println("Saldo insuficiente");
+    } else {
+        System.out.printf("usted reitro", saldoaRetirar, resultadoDelaExtraccionPorCajero);    }
+    
+    System.out.println(resp);
+    }
+    
+}
+
+Master
+
+package io.banco.cuentas;
+
+public class Master {
+    private String numeroDeCuenta, alias;
+    private double saldo;
+    
+    public Master (String ndc, String alias){
+        numeroDeCuenta = ndc;
+        this.alias = alias;
+    }
+    
+    public Master (String ndc, String alias, double saldo){
+        this(ndc, alias);
+        this.saldo = saldo;
+    }
+    
+    public double obtenerSaldo (){
+        return saldo;
+    }
+    
+    public String obtenerNumeroDeCuenta (){
+        return numeroDeCuenta;
+    }
+    
+    public String obtenerAlias (){
+        return alias;
+    }
+    
+    public void cambiarAlias(String alias){
+        this.alias = alias;
+    }
+    
+    public double retirar (double monto){
+        if (saldo < monto) return -1;
+            saldo = saldo - monto;
+            return = saldo;
+                   
+        }
+        return saldo;
+    }
+}
+
