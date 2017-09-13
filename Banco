@@ -4,7 +4,7 @@ package io.banco;
 import io.banco.cuentas.Master;
 public class Main {
     public static void main (String [] args){
-    Master ahorro = new Master ("12345678", "pepito", 5000);
+    Master ahorro = new Master ("12345678", "pepito", 5000, 12);
     ahorro.cambiarAlias("aliasMachio");
     double saldoaRetirar = 6000;
     double resultadoDelaExtraccionPorCajero = ahorro.retirar (saldoaRetirar);
@@ -12,9 +12,9 @@ public class Main {
     if (resultadoDelaExtraccionPorCajero < 0){
         System.err.println("Saldo insuficiente");
     } else {
-        System.out.printf("usted reitro", saldoaRetirar, resultadoDelaExtraccionPorCajero);    }
+        System.out.printf("usted reitro", saldoaRetirar, resultadoDelaExtraccionPorCajero);    
+    }
     
-    System.out.println(resp);
     }
     
 }
@@ -25,7 +25,7 @@ package io.banco.cuentas;
 
 public class Master {
     private String numeroDeCuenta, alias;
-    private double saldo;
+    public double saldo;
     
     public Master (String ndc, String alias){
         numeroDeCuenta = ndc;
@@ -55,11 +55,42 @@ public class Master {
     
     public double retirar (double monto){
         if (saldo < monto) return -1;
-            saldo = saldo - monto;
-            return = saldo;
-                   
+            saldo -= monto;
+            return saldo;           
         }
+    public double depositar (double monto){
+        saldo += monto;
         return saldo;
     }
+}
+
+
+Ahorro
+
+package io.banco.cuenta;
+
+/**
+ *
+ * @author alumno
+ */
+public class Ahorro extends Master {
+    int edad;
+    
+    public Ahorro (String ndc, String alias, double saldo, int edad){
+        super(ndc,alias,saldo);
+        this.edad= edad;
+    }
+    
+    @Override
+    public double retiar (double monto) {
+     if (edad >= 18) {
+          if (saldo < monto) return -1;
+            saldo -= monto;
+            return saldo;           
+        }
+     return -1;
+     }
+    }
+    
 }
 
