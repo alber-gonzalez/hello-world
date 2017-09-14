@@ -1,0 +1,49 @@
+package calculadorasueldo;
+import java.util.Scanner;
+
+public class CalculadoraSueldo {
+    
+    public static double calcularSueldoNeto (int horas, int antiguedad) {
+        double pagoNormal = 120;
+        double pagoExtra = 150;
+        double sueldoBasico;
+        double bono;
+        double sueldoBruto;
+        double sueldoNeto;
+               
+               
+        if (horas <= 160){
+            sueldoBasico = (horas*pagoNormal);            
+        } else {
+            sueldoBasico = (160*pagoNormal + (horas-160)*pagoExtra);
+        }
+        
+        bono = ((antiguedad%5)*300) + (antiguedad/5*800);
+        
+        sueldoBruto = (sueldoBasico + bono);
+        
+        if (sueldoBruto > 18000){
+            sueldoNeto = (sueldoBruto - (sueldoBruto*0.24));
+        } else {
+            sueldoNeto = (sueldoBruto - (sueldoBruto*0.20));
+        }
+            
+     return sueldoNeto;       
+    }
+   
+    public static void main(String[] args) {
+       
+       Scanner teclado = new Scanner (System.in);
+       double sueldoNeto;
+       
+       System.out.println("Ingrese la cantidad de horas trabajadas: ");
+       int horas = teclado.nextInt();
+       System.out.println("Ingrese la cantidad de años en la empresa");
+       int antiguedad = teclado.nextInt();
+       sueldoNeto = calcularSueldoNeto(horas, antiguedad);
+       System.out.println("Su sueldo neto es: "+ sueldoNeto);
+        
+        
+    }
+    
+}
